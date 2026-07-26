@@ -16,11 +16,22 @@
       "import": "./dist/postgres-provider.js"
     }
   },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "supabase/migrations",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "@supabase/supabase-js": "^2.0.0"

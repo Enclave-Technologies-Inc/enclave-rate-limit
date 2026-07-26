@@ -121,3 +121,7 @@ npm install
 npm run build
 npm test
 ```
+
+## License
+
+**Apache-2.0** — see [`LICENSE`](./LICENSE).
