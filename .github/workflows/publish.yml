@@ -1,4 +1,4 @@
-# Publish @enclave/rate-limit to npm on GitHub Release (tag e.g. v0.1.0).
+# Publish @enclave-technologies/rate-limit to npm on GitHub Release (tag e.g. v0.1.0).
 # Required secret: NPM_TOKEN
 
 name: publish

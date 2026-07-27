@@ -15,7 +15,7 @@ create table if not exists public.rate_limit_counters (
 );
 
 comment on table public.rate_limit_counters is
-  'Shared rate-limit state for edge functions (@enclave/rate-limit)';
+  'Shared rate-limit state for edge functions (@enclave-technologies/rate-limit)';
 
 comment on column public.rate_limit_counters.key is
   'Caller-composed key, e.g. auth:login:email:user@example.com';

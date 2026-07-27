@@ -1,7 +1,7 @@
-# @enclave/rate-limit
+# @enclave-technologies/rate-limit
 
 Shared rate limiting for Enclave product APIs (Supabase edge functions). Infra
-only — no dependency on `@enclave/pqc-primitives` or product SDKs.
+only — no dependency on `@enclave-technologies/pqc-primitives` or product SDKs.
 
 Design mirrors `enclave-pqc-primitives`' provider seam: call sites depend on
 `RateLimitProvider`; today the concrete backend is `PostgresProvider`. A
@@ -21,7 +21,7 @@ This package supports both; it does **not** pick for you.
 1. **Copy the migration** (this package cannot apply SQL to your project):
 
    ```bash
-   cp node_modules/@enclave/rate-limit/supabase/migrations/20260714010000_rate_limit_counters.sql \
+   cp node_modules/@enclave-technologies/rate-limit/supabase/migrations/20260714010000_rate_limit_counters.sql \
      supabase/migrations/$(date -u +%Y%m%d%H%M%S)_rate_limit_counters.sql
    # or, with a file: dependency: copy from the sibling Enclave-Inc checkout
    ```
@@ -31,14 +31,14 @@ This package supports both; it does **not** pick for you.
 2. **Add the dependency** (file / npm as preferred by your monorepo):
 
    ```json
-   "@enclave/rate-limit": "file:../../Enclave-Inc/enclave-rate-limit"
+   "@enclave-technologies/rate-limit": "file:../../Enclave-Inc/enclave-rate-limit"
    ```
 
 3. **Instantiate with your service-role client**:
 
    ```ts
    import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-   import { PostgresProvider } from "@enclave/rate-limit";
+   import { PostgresProvider } from "@enclave-technologies/rate-limit";
 
    const admin = createClient(url, serviceRoleKey, {
      auth: { autoRefreshToken: false, persistSession: false },

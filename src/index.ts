@@ -1,7 +1,7 @@
 /**
- * `@enclave/rate-limit` — shared rate limiting for Enclave product APIs.
+ * `@enclave-technologies/rate-limit` — shared rate limiting for Enclave product APIs.
  *
- * Infra only: no dependency on `@enclave/pqc-primitives` or product SDKs.
+ * Infra only: no dependency on `@enclave-technologies/pqc-primitives` or product SDKs.
  * Swap {@link PostgresProvider} for a Redis/Upstash provider later by
  * implementing {@link RateLimitProvider}.
  */

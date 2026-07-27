@@ -4,7 +4,7 @@ Shared rate limiting for Enclave `*-api` Supabase edge functions.
 
 ## Rules
 
-1. Infra only — no `@enclave/pqc-primitives`, no product SDKs.
+1. Infra only — no `@enclave-technologies/pqc-primitives`, no product SDKs.
 2. Depend on {@link RateLimitProvider}; ship {@link PostgresProvider} now.
 3. Atomic increments via migration RPCs — never client read-then-write.
 4. This package does not own Supabase projects. Consumers **copy** the SQL
