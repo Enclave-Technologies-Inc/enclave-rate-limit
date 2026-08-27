@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Enclave-Inc/enclave-rate-limit"
+    "url": "https://github.com/Enclave-Technologies-Inc/enclave-rate-limit"
   },
   "engines": {
     "node": ">=20"

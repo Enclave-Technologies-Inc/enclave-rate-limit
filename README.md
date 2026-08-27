@@ -23,7 +23,7 @@ This package supports both; it does **not** pick for you.
    ```bash
    cp node_modules/@enclave-technologies/rate-limit/supabase/migrations/20260714010000_rate_limit_counters.sql \
      supabase/migrations/$(date -u +%Y%m%d%H%M%S)_rate_limit_counters.sql
-   # or, with a file: dependency: copy from the sibling Enclave-Inc checkout
+   # or, with a file: dependency: copy from the sibling Enclave-Technologies-Inc checkout
    ```
 
    Then `supabase db push` (or your normal migration path).
@@ -31,7 +31,7 @@ This package supports both; it does **not** pick for you.
 2. **Add the dependency** (file / npm as preferred by your monorepo):
 
    ```json
-   "@enclave-technologies/rate-limit": "file:../../Enclave-Inc/enclave-rate-limit"
+   "@enclave-technologies/rate-limit": "file:../enclave-rate-limit"
    ```
 
 3. **Instantiate with your service-role client**:
